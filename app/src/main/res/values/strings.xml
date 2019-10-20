@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">List App</string>
+
+    <string-array name="items">
+        <item>Snake</item>
+        <item>Cat</item>
+        <item>Dog</item>
+    </string-array>
+
+    <string-array name="prices">
+        <item>$5</item>
+        <item>$10</item>
+        <item>$35</item>
+    </string-array>
+
+    <string-array name="descriptions">
+        <item>Sneaky snake Pete needs a new home</item>
+        <item>Cute cat named Kit for adoption</item>
+        <item> Furry friend rover the dog for adoption</item>
+    </string-array>
+
+
+</resources>
