@@ -7,13 +7,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.example.listapp.R;
-
 public class ItemAdapter extends BaseAdapter {
 
-
     LayoutInflater mInflater;
-    String[] items;
+    String[]items;
     String[] prices;
     String[] descriptions;
 
@@ -22,6 +19,7 @@ public class ItemAdapter extends BaseAdapter {
         prices = p;
         descriptions = d;
         mInflater = (LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
     }
 
 
@@ -41,25 +39,21 @@ public class ItemAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int i, View convertView, ViewGroup parent) {
-
+    public View getView(int i, View view, ViewGroup viewGroup) {
         View v = mInflater.inflate(R.layout.my_listview_detail, null);
-        TextView nameTextView = (TextView) v.findViewById(R.id.nameTextView);
-        TextView descriptionTextView = (TextView) v.findViewById(R.id.descriptionTextView);
-        TextView priceTextView = (TextView) v.findViewById(R.id.priceTextView);
-
+        TextView nameTextView = (TextView) v. findViewById(R.id.nameTextView);
+        TextView descriptionTextView = (TextView) v. findViewById(R.id.descriptionTextView);
+        TextView priceTextView = (TextView) v. findViewById(R.id.priceTextView);
 
         String name = items[i];
-        String desc = descriptions [i];
-        String cost = prices [i];
+        String desc = descriptions[i];
+        String cost = prices[i];
+
         nameTextView.setText(name);
         descriptionTextView.setText(desc);
         priceTextView.setText(cost);
 
+
         return v;
-
-
-
-
     }
 }

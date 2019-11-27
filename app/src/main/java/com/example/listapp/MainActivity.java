@@ -1,22 +1,20 @@
 package com.example.listapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     ListView myListView;
-    String[] items;
+    String[]items;
     String[] prices;
     String[] descriptions;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,19 +31,12 @@ public class MainActivity extends AppCompatActivity {
         myListView.setAdapter(itemAdapter);
 
         myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
-
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent showDetailActivity = new Intent(getApplicationContext(), DetailActivity.class);
-                final Intent intent = showDetailActivity.putExtra("com.example.listapp.ITEM_INDEX", i);
+                showDetailActivity.putExtra("com.example.listapp.ITEM_INDEX", i);
                 startActivity(showDetailActivity);
             }
-
-
         });
-
-
     }
 }
-
